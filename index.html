@@ -19,26 +19,26 @@
 
 <style>
 :root {
-  --navy:       #120508;
-  --navy2:      #1A080E;
-  --navy3:      #220B12;
-  --navy4:      #2A0E16;
-  --violet:     #C02040;
-  --violet2:    #A01835;
-  --violet3:    #80122A;
-  --violetglow: rgba(192,32,64,0.25);
+  --navy:       #04080F;
+  --navy2:      #080F1E;
+  --navy3:      #0D1628;
+  --navy4:      #111E35;
+  --violet:     #2563EB;
+  --violet2:    #1D4ED8;
+  --violet3:    #1E40AF;
+  --violetglow: rgba(37,99,235,0.25);
   --coral:      #C8870A;
   --coral2:     #B07508;
   --coralglow:  rgba(212,160,23,0.2);
-  --cyan:       #F2B8C6;
-  --cyanglow:   rgba(242,184,198,0.15);
-  --gold:       #C8961A;
+  --cyan:       #93C5FD;
+  --cyanglow:   rgba(147,197,253,0.15);
+  --gold:       #D4A017;
   --white:      #FFFFFF;
-  --offwhite:   #F5E6EA;
-  --dim:        #9A6070;
-  --dimmer:     #4A1A28;
-  --line:       rgba(192,32,64,0.18);
-  --linecyan:   rgba(242,184,198,0.12);
+  --offwhite:   #E8EEF8;
+  --dim:        #7A8FB0;
+  --dimmer:     #2A3A60;
+  --line:       rgba(37,99,235,0.18);
+  --linecyan:   rgba(147,197,253,0.12);
   --glassline:  rgba(255,255,255,0.06);
   --sidebar-w:  260px;
   --topbar-h:   58px;
@@ -62,7 +62,7 @@ body {
   position: fixed;
   top: 0; left: 0; right: 0;
   height: var(--topbar-h);
-  background: rgba(18,5,8,0.92);
+  background: rgba(8,15,30,0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--line);
@@ -99,7 +99,7 @@ body {
 .hamburger {
   width: 40px; height: 40px;
   border-radius: 10px;
-  background: rgba(192,32,64,0.1);
+  background: rgba(37,99,235,0.1);
   border: 1px solid var(--line);
   display: flex;
   flex-direction: column;
@@ -110,7 +110,7 @@ body {
   transition: all 0.25s;
   flex-shrink: 0;
 }
-.hamburger:hover { background: rgba(192,32,64,0.2); border-color: var(--violet); }
+.hamburger:hover { background: rgba(37,99,235,0.2); border-color: var(--violet); }
 .hamburger span {
   display: block;
   width: 18px; height: 2px;
@@ -268,7 +268,7 @@ body {
 }
 
 .sidebar-nav-link:hover { color: var(--offwhite); background: rgba(124,58,237,0.07); }
-.sidebar-nav-link.active { color: var(--violet); background: rgba(192,32,64,0.1); }
+.sidebar-nav-link.active { color: var(--violet); background: rgba(37,99,235,0.1); }
 .sidebar-nav-link.active::before { transform: scaleY(1); }
 
 .nav-link-icon {
@@ -280,7 +280,7 @@ body {
   flex-shrink: 0;
   transition: background 0.22s;
 }
-.sidebar-nav-link.active .nav-link-icon { background: rgba(192,32,64,0.2); }
+.sidebar-nav-link.active .nav-link-icon { background: rgba(37,99,235,0.2); }
 .sidebar-nav-link:hover .nav-link-icon { background: rgba(124,58,237,0.12); }
 
 .nav-link-text { flex: 1; }
@@ -368,7 +368,7 @@ body {
 
 .sidebar-action-btn.violet-btn {
   color: var(--violet);
-  border-color: rgba(192,32,64,0.3);
+  border-color: rgba(37,99,235,0.3);
 }
 .sidebar-action-btn.violet-btn:hover {
   background: rgba(124,58,237,0.12);
@@ -439,7 +439,7 @@ body {
   font-size: 14px;
   transition: all 0.25s;
 }
-.sidebar-social-icon:hover { border-color: var(--violet); color: var(--violet); background: rgba(192,32,64,0.1); }
+.sidebar-social-icon:hover { border-color: var(--violet); color: var(--violet); background: rgba(37,99,235,0.1); }
 
 /* Footer credit */
 .sidebar-credit {
@@ -482,7 +482,7 @@ body {
   content: '';
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse at 80% 20%, rgba(180,30,60,0.32) 0, transparent 55%),
+    radial-gradient(ellipse at 80% 20%, rgba(37,99,235,0.32) 0, transparent 55%),
     radial-gradient(ellipse at 10% 90%, rgba(100,10,30,0.18) 0, transparent 50%);
   pointer-events: none;
 }
@@ -566,7 +566,7 @@ body {
 }
 .btn-neon-primary {
   background: linear-gradient(135deg, var(--violet), var(--coral));
-  color: #fff; box-shadow: 0 6px 28px rgba(192,32,64,0.4);
+  color: #fff; box-shadow: 0 6px 28px rgba(37,99,235,0.4);
 }
 .btn-neon-primary:hover { box-shadow: 0 10px 40px rgba(124,58,237,0.55); transform: translateY(-2px); }
 
@@ -690,7 +690,7 @@ body {
 .book-hero::before {
   content: ''; position: absolute; top: 0; right: -60px;
   width: 200px; height: 200px;
-  background: radial-gradient(circle, rgba(192,32,64,0.2) 0, transparent 70%);
+  background: radial-gradient(circle, rgba(37,99,235,0.2) 0, transparent 70%);
   pointer-events: none;
 }
 .page-eyebrow { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: var(--coral); font-weight: 700; margin-bottom: 8px; }
@@ -741,7 +741,7 @@ body {
   color: #fff; font-family: 'Syne', sans-serif; font-weight: 700;
   font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
   border: none; border-radius: 14px; cursor: pointer;
-  box-shadow: 0 8px 32px rgba(192,32,64,0.4); transition: all 0.3s; margin-top: 6px;
+  box-shadow: 0 8px 32px rgba(37,99,235,0.4); transition: all 0.3s; margin-top: 6px;
 }
 .submit-strip:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(124,58,237,0.55); }
 
@@ -796,7 +796,7 @@ body {
    ================================================ */
 .modal-overlay { position: fixed; inset: 0; background: rgba(5,10,26,0.85); display: none; justify-content: center; align-items: center; z-index: 9000; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 16px; }
 .modal-overlay.open { display: flex; }
-.modal-box { background: var(--navy3); border-radius: 22px; width: 100%; max-width: 480px; max-height: 85vh; overflow-y: auto; position: relative; padding: 26px; border: 1px solid var(--line); box-shadow: 0 30px 80px rgba(192,32,64,0.2); overflow: hidden; }
+.modal-box { background: var(--navy3); border-radius: 22px; width: 100%; max-width: 480px; max-height: 85vh; overflow-y: auto; position: relative; padding: 26px; border: 1px solid var(--line); box-shadow: 0 30px 80px rgba(37,99,235,0.2); overflow: hidden; }
 .modal-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--violet), var(--coral), var(--cyan)); }
 .modal-close { position: sticky; top: 0; float: right; background: none; border: none; color: var(--dimmer); font-size: 26px; cursor: pointer; line-height: 1; z-index: 10; padding: 0 0 10px 10px; }
 .modal-close:hover { color: var(--coral); }
@@ -808,14 +808,14 @@ body {
 .cancel-booking-btn { margin-top: 10px; width: 100%; padding: 10px; background: rgba(255,77,109,0.08); color: var(--coral); border: 1px solid rgba(255,77,109,0.3); border-radius: 8px; cursor: pointer; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; transition: all 0.25s; }
 .cancel-booking-btn:hover { background: rgba(255,77,109,0.15); }
 .tag { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 9.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
-.tag-active { background: rgba(192,32,64,0.15); color: var(--violet); }
+.tag-active { background: rgba(37,99,235,0.15); color: var(--violet); }
 .tag-cancelled { background: rgba(255,77,109,0.12); color: var(--coral); }
 
 #reviewPrompt { display: none; background: rgba(0,212,255,0.06); border: 1px solid var(--linecyan); border-radius: 12px; padding: 14px; text-align: center; color: var(--cyan); font-weight: 600; font-size: 13px; margin-bottom: 16px; }
 
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--navy); }
-::-webkit-scrollbar-thumb { background: rgba(192,32,64,0.4); border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: rgba(37,99,235,0.4); border-radius: 4px; }
 input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.5); }
 </style>
 </head>
@@ -1252,7 +1252,7 @@ function deleteReview(docId){const user=firebase.auth().currentUser;if(!user){go
 // ===== MY BOOKINGS =====
 function showUserBookings(){const user=firebase.auth().currentUser;if(!user){googleSignIn();return;}document.getElementById('myBookingsContent').innerHTML='<p style="text-align:center;color:var(--dim);">Loading...</p>';document.getElementById('myBookingsModal').classList.add('open');const unsub=db.collection('bookings').where('uid','==',user.uid).onSnapshot(snap=>{let bookings=[];snap.forEach(doc=>bookings.push({id:doc.id,...doc.data()}));bookings.sort((a,b)=>new Date(b.date||0)-new Date(a.date||0));bookings=bookings.slice(0,5);let html='';if(!bookings.length){html=`<div style="text-align:center;padding:20px;"><p style="color:var(--dim);">No bookings yet.</p><button onclick="closeMyBookings();switchTab('viewBook');" class="submit-strip" style="margin-top:12px;">Book Now →</button></div>`;}else{bookings.forEach(b=>{let disp='Unknown';try{if(typeof b.date==='string'){const[y,m,d]=b.date.split('-').map(Number);if(y&&m&&d)disp=new Date(y,m-1,d).toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});}}catch{}const depOk=b.deposit==='Made'||b.deposit==='Yes',can=b.status==='Cancelled';html+=`<div class="booking-card${can?' cancelled':''}"><h3>Booking #${b.bookingNumber||'N/A'}</h3><p>👤 ${b.name||'N/A'}</p><p>📅 ${disp}</p><p>⏰ ${b.time||'N/A'}</p>${b.service?`<p>✦ ${b.service}</p>`:''}<p>💳 <span style="color:${depOk?'var(--violet)':'var(--gold)'};font-weight:700;">${depOk?'Deposit Confirmed ✓':'Deposit Pending ⚠️'}</span></p>${b.total?`<p style="color:var(--coral);font-weight:700;">💰 $${Number(b.total).toLocaleString()}</p>`:''}<p>Status: <span class="tag ${can?'tag-cancelled':'tag-active'}">${can?'Cancelled':'Active'}</span></p>${!can?`<button class="cancel-booking-btn" onclick="cancelUserBooking('${b.id}','${b.bookingNumber||'N/A'}')">✕ Cancel</button>`:''}</div>`;});}document.getElementById('myBookingsContent').innerHTML=html;window.bookingsUnsubscribe=unsub;},()=>{document.getElementById('myBookingsContent').innerHTML='<p style="color:var(--coral);text-align:center;">Error loading bookings.</p>';});}
 function closeMyBookings(){document.getElementById('myBookingsModal').classList.remove('open');if(window.bookingsUnsubscribe){window.bookingsUnsubscribe();window.bookingsUnsubscribe=null;}}
-function cancelUserBooking(bookingId,bookingNumber){const user=firebase.auth().currentUser;if(!user){googleSignIn();return;}Swal.fire({title:'Cancel Booking?',html:`<p style="font-family:'Outfit',sans-serif;color:var(--dim);font-size:14px;">Cancel <strong>Booking #${bookingNumber}</strong>?</p>`,icon:'warning',showCancelButton:true,confirmButtonColor:'#C8870A',cancelButtonColor:'#444',confirmButtonText:'Yes, Cancel',cancelButtonText:'Keep',reverseButtons:true,background:'#0D1530',color:'#E8EAF0'}).then(result=>{if(!result.isConfirmed)return;db.collection('bookings').doc(bookingId).get().then(doc=>{if(!doc.exists){Swal.fire('Not Found','Booking not found.','error');return;}if(doc.data().uid!==user.uid){Swal.fire('Denied','Own bookings only.','error');return;}db.collection('bookings').doc(bookingId).update({status:'Cancelled',cancelledBy:'client'}).then(()=>Swal.fire({title:'Cancelled',text:`Booking #${bookingNumber} cancelled.`,icon:'success',confirmButtonColor:'#C02040',background:'#0D1530',color:'#E8EAF0'})).catch(err=>Swal.fire('Error','Failed: '+err.message,'error'));}).catch(err=>Swal.fire('Error',err.message,'error'));});}
+function cancelUserBooking(bookingId,bookingNumber){const user=firebase.auth().currentUser;if(!user){googleSignIn();return;}Swal.fire({title:'Cancel Booking?',html:`<p style="font-family:'Outfit',sans-serif;color:var(--dim);font-size:14px;">Cancel <strong>Booking #${bookingNumber}</strong>?</p>`,icon:'warning',showCancelButton:true,confirmButtonColor:'#C8870A',cancelButtonColor:'#444',confirmButtonText:'Yes, Cancel',cancelButtonText:'Keep',reverseButtons:true,background:'#0D1530',color:'#E8EAF0'}).then(result=>{if(!result.isConfirmed)return;db.collection('bookings').doc(bookingId).get().then(doc=>{if(!doc.exists){Swal.fire('Not Found','Booking not found.','error');return;}if(doc.data().uid!==user.uid){Swal.fire('Denied','Own bookings only.','error');return;}db.collection('bookings').doc(bookingId).update({status:'Cancelled',cancelledBy:'client'}).then(()=>Swal.fire({title:'Cancelled',text:`Booking #${bookingNumber} cancelled.`,icon:'success',confirmButtonColor:'#2563EB',background:'#0D1530',color:'#E8EAF0'})).catch(err=>Swal.fire('Error','Failed: '+err.message,'error'));}).catch(err=>Swal.fire('Error',err.message,'error'));});}
 function showPaymentInfo(){document.getElementById('paymentInfoModal').classList.add('open');}
 function closePaymentInfo(){document.getElementById('paymentInfoModal').classList.remove('open');}
 
