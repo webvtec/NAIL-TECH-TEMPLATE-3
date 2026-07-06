@@ -186,6 +186,22 @@ body {
 }
 .sidebar.open { transform: translateX(0); }
 
+/* Scrollable inner wrapper so the top accent strip stays fixed */
+.sidebar-scroll {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--violet) transparent;
+}
+.sidebar-scroll::-webkit-scrollbar { width: 5px; }
+.sidebar-scroll::-webkit-scrollbar-track { background: transparent; }
+.sidebar-scroll::-webkit-scrollbar-thumb { background: var(--violet); border-radius: 10px; }
+.sidebar-scroll::-webkit-scrollbar-thumb:hover { background: var(--violet2); }
+
 /* Sidebar gradient top strip */
 .sidebar::before {
   content: '';
@@ -487,6 +503,15 @@ body {
   pointer-events: none;
 }
 
+.hero-watermark {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='340' height='220'><defs><pattern id='wm' width='340' height='220' patternUnits='userSpaceOnUse' patternTransform='rotate(-28)'><text x='0' y='30' font-family='Syne, Outfit, sans-serif' font-size='15' font-weight='800' letter-spacing='2.5' fill='%23000000' fill-opacity='0.055'>SH'G NAILZ BUTEE CLUB</text><text x='-40' y='90' font-family='Syne, Outfit, sans-serif' font-size='15' font-weight='800' letter-spacing='2.5' fill='%23000000' fill-opacity='0.055'>SH'G NAILZ BUTEE CLUB</text><text x='60' y='150' font-family='Syne, Outfit, sans-serif' font-size='15' font-weight='800' letter-spacing='2.5' fill='%23000000' fill-opacity='0.055'>SH'G NAILZ BUTEE CLUB</text><text x='-20' y='210' font-family='Syne, Outfit, sans-serif' font-size='15' font-weight='800' letter-spacing='2.5' fill='%23000000' fill-opacity='0.055'>SH'G NAILZ BUTEE CLUB</text></pattern></defs><rect width='100%25' height='100%25' fill='url(%23wm)'/></svg>");
+  background-repeat: repeat;
+}
+
 .hero-eyebrow {
   display: inline-flex;
   align-items: center;
@@ -605,8 +630,18 @@ body {
 .stat-chip.cyan strong { color: var(--cyan); }
 
 /* Gallery */
-.gallery-section { padding: 0; margin-bottom: 28px; }
-.gallery-label { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; padding: 0 20px; }
+.gallery-section { padding: 0; margin-bottom: 28px; position: relative; }
+.gallery-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='100' viewBox='0 0 56 100'><g fill='none' stroke='%23D4AF37' stroke-width='1.1' stroke-opacity='0.55'><path d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100'/><path d='M28 0L28 -34'/><path d='M0 16L-28 0'/><path d='M0 50L-28 66'/><path d='M56 50L84 66'/><path d='M56 16L84 0'/></g></svg>");
+  background-size: 56px 100px;
+  background-repeat: repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+.gallery-label { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; padding: 0 20px; position: relative; z-index: 1; }
 .gallery-label-text { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--violet); white-space: nowrap; }
 .gallery-label-line { flex: 1; height: 1px; background: linear-gradient(90deg, var(--line), transparent); }
 
@@ -620,6 +655,8 @@ body {
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+  position: relative;
+  z-index: 1;
 }
 .gallery-grid::-webkit-scrollbar { display: none; }
 .gallery-grid > div {
@@ -825,6 +862,7 @@ input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.5); }
      SIDEBAR DRAWER
      ================================================ -->
 <aside class="sidebar" id="sidebar">
+<div class="sidebar-scroll">
 
   <!-- Brand -->
   <div class="sidebar-head">
@@ -911,6 +949,8 @@ input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.5); }
       Log In
     </button>
   </div>
+
+</div>
 </aside>
 
 <!-- ================================================
@@ -921,6 +961,7 @@ input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.5); }
   <!-- STYLES VIEW -->
   <div class="view active" id="viewStyles">
     <div class="hero-block">
+      <div class="hero-watermark"></div>
       <h1 class="hero-title">
         Beauty That<br>
         <span class="outline">Hits</span>
