@@ -19,27 +19,27 @@
 
 <style>
 :root {
-  --navy:       #0A0A0B;
-  --navy2:      #101012;
-  --navy3:      #18181B;
-  --navy4:      #212124;
+  --navy:       #FFFFFF;
+  --navy2:      #F2F7F6;
+  --navy3:      #E8F0EF;
+  --navy4:      #D5E4E3;
   --violet:     #0E7C7B;
   --violet2:    #0B615F;
   --violet3:    #094F4D;
-  --violetglow: rgba(14,124,123,0.22);
+  --violetglow: rgba(14,124,123,0.18);
   --coral:      #B76E79;
   --coral2:     #96545E;
   --coralglow:  rgba(183,110,121,0.22);
-  --cyan:       #FFFFFF;
-  --cyanglow:   rgba(255,255,255,0.10);
-  --gold:       #C79A88;
-  --white:      #FFFFFF;
-  --offwhite:   #F3EEE6;
-  --dim:        #A79A86;
-  --dimmer:     #38343A;
-  --line:       rgba(14,124,123,0.22);
-  --linecyan:   rgba(255,255,255,0.10);
-  --glassline:  rgba(255,255,255,0.06);
+  --cyan:       #0E7C7B;
+  --cyanglow:   rgba(14,124,123,0.10);
+  --gold:       #7A5048;
+  --white:      #111111;
+  --offwhite:   #1C1C1C;
+  --dim:        #3D3D3D;
+  --dimmer:     #999999;
+  --line:       rgba(14,124,123,0.25);
+  --linecyan:   rgba(14,124,123,0.18);
+  --glassline:  rgba(14,124,123,0.10);
   --sidebar-w:  260px;
   --topbar-h:   58px;
 }
@@ -62,7 +62,7 @@ body {
   position: fixed;
   top: 0; left: 0; right: 0;
   height: var(--topbar-h);
-  background: rgba(8,15,30,0.92);
+  background: rgba(255,255,255,0.96);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--line);
@@ -161,7 +161,7 @@ body {
 .sidebar-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(8,8,9,0.7);
+  background: rgba(200,220,218,0.7);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   z-index: 950;
@@ -500,7 +500,8 @@ body {
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--offwhite);
-  margin-bottom: 20px;
+  margin-bottom: 28px;
+  margin-top: 0;
   position: relative; z-index: 1;
 }
 
@@ -526,7 +527,7 @@ body {
 
 .hero-sub {
   font-size: 14px; color: var(--dim); line-height: 1.7;
-  margin-bottom: 28px; position: relative; z-index: 1; max-width: 320px;
+  margin-bottom: 12px; position: relative; z-index: 1; max-width: 320px;
 }
 
 .hero-btns {
@@ -772,7 +773,7 @@ body {
 /* ================================================
    MODALS
    ================================================ */
-.modal-overlay { position: fixed; inset: 0; background: rgba(8,8,9,0.85); display: none; justify-content: center; align-items: center; z-index: 9000; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 16px; }
+.modal-overlay { position: fixed; inset: 0; background: rgba(200,225,222,0.85); display: none; justify-content: center; align-items: center; z-index: 9000; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 16px; }
 .modal-overlay.open { display: flex; }
 .modal-box { background: var(--navy3); border-radius: 22px; width: 100%; max-width: 480px; max-height: 85vh; overflow-y: auto; position: relative; padding: 26px; border: 1px solid var(--line); box-shadow: 0 30px 80px rgba(14,124,123,0.2); overflow: hidden; }
 .modal-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--violet); }
@@ -792,7 +793,7 @@ body {
 #reviewPrompt { display: none; background: rgba(255,255,255,0.06); border: 1px solid var(--linecyan); border-radius: 12px; padding: 14px; text-align: center; color: var(--cyan); font-weight: 600; font-size: 13px; margin-bottom: 16px; }
 
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: var(--navy); }
+::-webkit-scrollbar-track { background: #f0f5f4; }
 ::-webkit-scrollbar-thumb { background: rgba(14,124,123,0.4); border-radius: 4px; }
 input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.5); }
 </style>
@@ -920,13 +921,13 @@ input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.5); }
   <!-- STYLES VIEW -->
   <div class="view active" id="viewStyles">
     <div class="hero-block">
-      <div class="hero-eyebrow">📍 Lot 14 Content Gardens Rd · Ocho Rios, Jamaica</div>
       <h1 class="hero-title">
         Beauty That<br>
         <span class="outline">Hits</span>
         <span class="coral-word">Different.</span>
       </h1>
       <p class="hero-sub">Premium nail services in Ocho Rios, Jamaica.<br>Mon – Sat · 8 AM to 5 PM.</p>
+      <div class="hero-eyebrow">📍 Lot 14 Content Gardens Rd · Ocho Rios, Jamaica</div>
       <div class="hero-btns">
         <button class="btn-neon btn-neon-primary" onclick="switchTab('viewBook')">Book Now →</button>
         <div class="hero-social-icons">
@@ -1016,7 +1017,7 @@ input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.5); }
     <div class="price-wrap">
       <div class="price-block"><div class="price-header gold-h">⌛ Lateness Policy</div><div style="padding:8px 0 4px;"><div class="price-row"><span>15 min late</span><span style="color:var(--coral);font-weight:700;">CANCELLED</span></div><div class="price-row"><span>Late Night Fee (after 5 PM)</span><span>$2,500</span></div><div class="price-row"><span>Deposit</span><span style="color:var(--violet);font-weight:700;">$2,000 REQUIRED</span></div></div></div>
       <div class="price-block"><div class="price-header violet-h">✦ Nail Services</div><div style="padding:8px 14px 14px;" id="hairPriceList"></div></div>
-      <style>.price-style-card{margin-bottom:10px;border-radius:6px;overflow:hidden;border:1px solid var(--glassline);background:rgba(16,16,18,0.5);}.price-style-head{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;cursor:pointer;user-select:none;background:rgba(183,110,121,0.05);transition:background 0.2s;}.price-style-head:hover{background:rgba(14,124,123,0.12);}.price-style-name{font-family:'Syne','Outfit',sans-serif;font-size:14px;font-weight:600;color:var(--offwhite);letter-spacing:0.5px;}.price-style-name small{display:block;font-size:10px;font-weight:400;color:var(--dim);font-style:italic;margin-top:2px;}.price-style-from{font-size:12px;color:var(--cyan);font-weight:700;white-space:nowrap;font-family:'Outfit',sans-serif;}.price-style-toggle{font-size:14px;color:var(--violet);margin-left:8px;transition:transform 0.25s;}.price-style-card.open .price-style-toggle{transform:rotate(180deg);}.price-style-body{display:none;padding:8px 14px 12px;border-top:1px solid var(--glassline);background:rgba(8,8,9,0.6);}.price-style-card.open .price-style-body{display:block;}.price-size-title{margin-top:8px;margin-bottom:4px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--violet);}.price-size-title:first-child{margin-top:0;}.price-row-inner{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.03);}.price-row-inner:last-child{border-bottom:none;}.price-row-inner .label{font-size:13px;color:var(--offwhite);}.price-row-inner .amt{font-size:13px;color:var(--cyan);font-weight:700;white-space:nowrap;}.price-group-divider{margin:14px 0 8px;padding:6px 10px;border-radius:3px;background:rgba(14,124,123,0.08);border-left:3px solid var(--violet);font-family:'Syne',sans-serif;font-style:italic;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--offwhite);}.price-group-divider:first-child{margin-top:4px;}</style>
+      <style>.price-style-card{margin-bottom:10px;border-radius:6px;overflow:hidden;border:1px solid var(--glassline);background:rgba(220,235,233,0.5);}.price-style-head{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;cursor:pointer;user-select:none;background:rgba(183,110,121,0.05);transition:background 0.2s;}.price-style-head:hover{background:rgba(14,124,123,0.10);}.price-style-name{font-family:'Syne','Outfit',sans-serif;font-size:14px;font-weight:600;color:var(--offwhite);letter-spacing:0.5px;}.price-style-name small{display:block;font-size:10px;font-weight:400;color:var(--dim);font-style:italic;margin-top:2px;}.price-style-from{font-size:12px;color:var(--cyan);font-weight:700;white-space:nowrap;font-family:'Outfit',sans-serif;}.price-style-toggle{font-size:14px;color:var(--violet);margin-left:8px;transition:transform 0.25s;}.price-style-card.open .price-style-toggle{transform:rotate(180deg);}.price-style-body{display:none;padding:8px 14px 12px;border-top:1px solid var(--glassline);background:rgba(210,230,228,0.5);}.price-style-card.open .price-style-body{display:block;}.price-size-title{margin-top:8px;margin-bottom:4px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--violet);}.price-size-title:first-child{margin-top:0;}.price-row-inner{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(14,124,123,0.08);}.price-row-inner:last-child{border-bottom:none;}.price-row-inner .label{font-size:13px;color:var(--offwhite);}.price-row-inner .amt{font-size:13px;color:var(--cyan);font-weight:700;white-space:nowrap;}.price-group-divider{margin:14px 0 8px;padding:6px 10px;border-radius:3px;background:rgba(14,124,123,0.08);border-left:3px solid var(--violet);font-family:'Syne',sans-serif;font-style:italic;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--offwhite);}.price-group-divider:first-child{margin-top:4px;}</style>
       <script>(function(){const a=[{group:'Gel Nails',styles:[{name:'Basic Gel Manicure',sizes:{Options:[['Short',3500],['Medium',4000],['Long',4500]]}},{name:'Gel French Tips',sizes:{Options:[['Short',4000],['Medium',4500],['Long',5000]]}},{name:'Gel Ombre',sizes:{Options:[['Short',4500],['Medium',5000],['Long',5500]]}},{name:'Builder Gel',sizes:{Options:[['Short',5000],['Medium',5500],['Long',6000]]}}]},{group:'Acrylic Nails',styles:[{name:'Full Set Acrylic',sizes:{Options:[['Standard',5000],['With Design',6000]]}},{name:'Acrylic Fill',sizes:{Options:[['Standard',3000],['With Design',4000]]}},{name:'Acrylic with Nail Art',sizes:{Options:[['Standard',6000],['Complex Design',7500]]}}]},{group:'Nail Extensions',styles:[{name:'Coffin Extensions',sizes:{Options:[['Standard',6000],['With Design',7000]]}},{name:'Almond Extensions',sizes:{Options:[['Standard',6000],['With Design',7000]]}},{name:'Stiletto Extensions',sizes:{Options:[['Standard',7000],['With Design',8000]]}},{name:'Square Extensions',sizes:{Options:[['Standard',5500],['With Design',6500]]}}]},{group:'Nail Art',styles:[{name:'Simple Nail Art',sizes:{Options:[['Per Set',1500]]}},{name:'Medium Nail Art',sizes:{Options:[['Per Set',2500]]}},{name:'Complex Nail Art',sizes:{Options:[['Per Set',3500]]}},{name:'3D Nail Art',sizes:{Options:[['Per Set',4500]]}}]},{group:'Manicure',styles:[{name:'Classic Manicure',sizes:{Options:[['Standard',2000]]}},{name:'Spa Manicure',sizes:{Options:[['Standard',3000]]}},{name:'Paraffin Manicure',sizes:{Options:[['Standard',3500]]}}]},{group:'Pedicure',styles:[{name:'Classic Pedicure',sizes:{Options:[['Standard',2500]]}},{name:'Spa Pedicure',sizes:{Options:[['Standard',3500]]}},{name:'Gel Pedicure',sizes:{Options:[['Standard',4000]]}}]},{group:'Nail Removal',styles:[{name:'Gel Removal',sizes:{Options:[['Standard',1500]]}},{name:'Acrylic Removal',sizes:{Options:[['Standard',2000]]}},{name:'Extension Removal',sizes:{Options:[['Standard',2000]]}}]}];function b(p){return typeof p==='number'?'$'+p.toLocaleString():'$'+p;}function c(s){let m=Infinity;Object.values(s).forEach(r=>r.forEach(([,p])=>{const n=typeof p==='number'?p:parseInt(String(p).replace(/[^\d]/g,''),10);if(!isNaN(n)&&n<m)m=n;}));return m===Infinity?0:m;}const d=document.getElementById('hairPriceList');if(!d)return;let h='';a.forEach(g=>{h+=`<div class="price-group-divider">${g.group}</div>`;g.styles.forEach(s=>{const m=c(s.sizes);const st=s.subtitle?`<small>${s.subtitle}</small>`:'';h+=`<div class="price-style-card" onclick="this.classList.toggle('open')"><div class="price-style-head"><div class="price-style-name">${s.name}${st}</div><div style="display:flex;align-items:center;"><span class="price-style-from">from $${m.toLocaleString()}</span><span class="price-style-toggle">▾</span></div></div><div class="price-style-body">`;Object.entries(s.sizes).forEach(([n,r])=>{if(n!=='Options')h+=`<div class="price-size-title">${n}</div>`;r.forEach(([l,p])=>{h+=`<div class="price-row-inner"><span class="label">${l}</span><span class="amt">${b(p)}</span></div>`;});});h+=`</div></div>`;});});h+=`<div style="margin-top:14px;padding-top:10px;border-top:1px solid var(--glassline);"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--violet);margin-bottom:6px;">Optional Extra</div><div style="display:flex;justify-content:space-between;padding:8px 0;"><span style="font-size:13px;color:var(--offwhite);">Nail Art Add-on</span><span style="font-size:13px;color:var(--cyan);font-weight:700;white-space:nowrap;">$500+</span></div></div>`;d.innerHTML=h;})();</script>
       <div class="price-cta"><button class="btn-neon btn-neon-primary" style="width:auto;" onclick="switchTab('viewBook')">Book Now →</button></div>
     </div>
@@ -1231,7 +1232,7 @@ function deleteReview(docId){const user=firebase.auth().currentUser;if(!user){go
 // ===== MY BOOKINGS =====
 function showUserBookings(){const user=firebase.auth().currentUser;if(!user){googleSignIn();return;}document.getElementById('myBookingsContent').innerHTML='<p style="text-align:center;color:var(--dim);">Loading...</p>';document.getElementById('myBookingsModal').classList.add('open');const unsub=db.collection('bookings').where('uid','==',user.uid).onSnapshot(snap=>{let bookings=[];snap.forEach(doc=>bookings.push({id:doc.id,...doc.data()}));bookings.sort((a,b)=>new Date(b.date||0)-new Date(a.date||0));bookings=bookings.slice(0,5);let html='';if(!bookings.length){html=`<div style="text-align:center;padding:20px;"><p style="color:var(--dim);">No bookings yet.</p><button onclick="closeMyBookings();switchTab('viewBook');" class="submit-strip" style="margin-top:12px;">Book Now →</button></div>`;}else{bookings.forEach(b=>{let disp='Unknown';try{if(typeof b.date==='string'){const[y,m,d]=b.date.split('-').map(Number);if(y&&m&&d)disp=new Date(y,m-1,d).toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});}}catch{}const depOk=b.deposit==='Made'||b.deposit==='Yes',can=b.status==='Cancelled';html+=`<div class="booking-card${can?' cancelled':''}"><h3>Booking #${b.bookingNumber||'N/A'}</h3><p>👤 ${b.name||'N/A'}</p><p>📅 ${disp}</p><p>⏰ ${b.time||'N/A'}</p>${b.service?`<p>✦ ${b.service}</p>`:''}<p>💳 <span style="color:${depOk?'var(--violet)':'var(--gold)'};font-weight:700;">${depOk?'Deposit Confirmed ✓':'Deposit Pending ⚠️'}</span></p>${b.total?`<p style="color:var(--coral);font-weight:700;">💰 $${Number(b.total).toLocaleString()}</p>`:''}<p>Status: <span class="tag ${can?'tag-cancelled':'tag-active'}">${can?'Cancelled':'Active'}</span></p>${!can?`<button class="cancel-booking-btn" onclick="cancelUserBooking('${b.id}','${b.bookingNumber||'N/A'}')">✕ Cancel</button>`:''}</div>`;});}document.getElementById('myBookingsContent').innerHTML=html;window.bookingsUnsubscribe=unsub;},()=>{document.getElementById('myBookingsContent').innerHTML='<p style="color:var(--coral);text-align:center;">Error loading bookings.</p>';});}
 function closeMyBookings(){document.getElementById('myBookingsModal').classList.remove('open');if(window.bookingsUnsubscribe){window.bookingsUnsubscribe();window.bookingsUnsubscribe=null;}}
-function cancelUserBooking(bookingId,bookingNumber){const user=firebase.auth().currentUser;if(!user){googleSignIn();return;}Swal.fire({title:'Cancel Booking?',html:`<p style="font-family:'Outfit',sans-serif;color:var(--dim);font-size:14px;">Cancel <strong>Booking #${bookingNumber}</strong>?</p>`,icon:'warning',showCancelButton:true,confirmButtonColor:'#0E7C7B',cancelButtonColor:'#444',confirmButtonText:'Yes, Cancel',cancelButtonText:'Keep',reverseButtons:true,background:'#18181B',color:'#F3EEE6'}).then(result=>{if(!result.isConfirmed)return;db.collection('bookings').doc(bookingId).get().then(doc=>{if(!doc.exists){Swal.fire('Not Found','Booking not found.','error');return;}if(doc.data().uid!==user.uid){Swal.fire('Denied','Own bookings only.','error');return;}db.collection('bookings').doc(bookingId).update({status:'Cancelled',cancelledBy:'client'}).then(()=>Swal.fire({title:'Cancelled',text:`Booking #${bookingNumber} cancelled.`,icon:'success',confirmButtonColor:'#0E7C7B',background:'#18181B',color:'#F3EEE6'})).catch(err=>Swal.fire('Error','Failed: '+err.message,'error'));}).catch(err=>Swal.fire('Error',err.message,'error'));});}
+function cancelUserBooking(bookingId,bookingNumber){const user=firebase.auth().currentUser;if(!user){googleSignIn();return;}Swal.fire({title:'Cancel Booking?',html:`<p style="font-family:'Outfit',sans-serif;color:var(--dim);font-size:14px;">Cancel <strong>Booking #${bookingNumber}</strong>?</p>`,icon:'warning',showCancelButton:true,confirmButtonColor:'#0E7C7B',cancelButtonColor:'#444',confirmButtonText:'Yes, Cancel',cancelButtonText:'Keep',reverseButtons:true,background:'#EAF0EF',color:'#1C1C1C'}).then(result=>{if(!result.isConfirmed)return;db.collection('bookings').doc(bookingId).get().then(doc=>{if(!doc.exists){Swal.fire('Not Found','Booking not found.','error');return;}if(doc.data().uid!==user.uid){Swal.fire('Denied','Own bookings only.','error');return;}db.collection('bookings').doc(bookingId).update({status:'Cancelled',cancelledBy:'client'}).then(()=>Swal.fire({title:'Cancelled',text:`Booking #${bookingNumber} cancelled.`,icon:'success',confirmButtonColor:'#0E7C7B',background:'#EAF0EF',color:'#1C1C1C'})).catch(err=>Swal.fire('Error','Failed: '+err.message,'error'));}).catch(err=>Swal.fire('Error',err.message,'error'));});}
 function showPaymentInfo(){document.getElementById('paymentInfoModal').classList.add('open');}
 function closePaymentInfo(){document.getElementById('paymentInfoModal').classList.remove('open');}
 
