@@ -20,6 +20,8 @@
 <style>
 :root {
   --navy:       #FFFFFF;
+  --lilac:      #F4EFFC;
+  --lilac2:     #EAE0F8;
   --navy2:      #F2F7F6;
   --navy3:      #E8F0EF;
   --navy4:      #D5E4E3;
@@ -49,7 +51,9 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Outfit', sans-serif;
-  background: var(--navy);
+  background:
+    radial-gradient(1000px 420px at 50% 300px, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 62%),
+    linear-gradient(180deg, var(--lilac) 0%, var(--lilac2) 100%);
   color: var(--offwhite);
   min-height: 100vh;
   overflow-x: hidden;
@@ -487,6 +491,7 @@ body {
   position: relative;
   padding: 44px 20px 36px;
   overflow: hidden;
+  background: var(--navy);
 }
 
 .hero-block::before {
