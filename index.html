@@ -124,7 +124,7 @@ body {
   font-size: 12.5px;
   letter-spacing: 1.6px;
   text-transform: uppercase;
-  color: var(--coral);
+  color: var(--violet);
   white-space: nowrap;
   max-width: calc(100vw - 130px);
   overflow: hidden;
@@ -630,14 +630,19 @@ body {
 .stat-chip.cyan strong { color: var(--cyan); }
 
 /* Gallery */
-.gallery-section { padding: 0; margin-bottom: 28px; position: relative; }
-.gallery-section::before {
+.gallery-section { padding: 0; margin-bottom: 28px; position: relative; z-index: 1; }
+
+/* Continuous gold hexagon chain runs behind the ENTIRE gallery (all sections)
+   so it never restarts/breaks between photo rows — single pattern, single element. */
+#galleryDisplay { position: relative; }
+#galleryDisplay::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='100' viewBox='0 0 56 100'><g fill='none' stroke='%23D4AF37' stroke-width='1.1' stroke-opacity='0.55'><path d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100'/><path d='M28 0L28 -34'/><path d='M0 16L-28 0'/><path d='M0 50L-28 66'/><path d='M56 50L84 66'/><path d='M56 16L84 0'/></g></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='100' viewBox='0 0 56 100'><g fill='none' stroke='%23F4CD4E' stroke-width='1.75' stroke-opacity='0.85'><path d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100'/><path d='M28 0L28 -34'/><path d='M0 16L-28 0'/><path d='M0 50L-28 66'/><path d='M56 50L84 66'/><path d='M56 16L84 0'/></g></svg>");
   background-size: 56px 100px;
   background-repeat: repeat;
+  filter: drop-shadow(0 0 3px rgba(244,205,78,0.75)) drop-shadow(0 0 7px rgba(212,175,55,0.5));
   pointer-events: none;
   z-index: 0;
 }
